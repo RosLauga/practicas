@@ -11,4 +11,6 @@ HOOK DE FETCH
 
 COMPONENTE CONTADOR
 
-COMPONENTE BREAKINGBAD PARA FETCH
+COMPONENTE BREAKINGBAD PARA FETCH (se agregó mapeo del array de personajes)
+
+COMPONENTE CARDPERSONAJES (por cada personaje se crea una card dinamica con la info)
