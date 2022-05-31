@@ -1,0 +1,10 @@
+.cardcharacter {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.cardcharacter img {
+    margin: 0 auto;
+}

@@ -1,23 +1,37 @@
 import './App.css';
-import Contador from './components/contador';
+import { useState, useEffect } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BreakingBad from './components/BreakingBad';
-
-
-// https://www.breakingbadapi.com/api/characters
-
+import CardPersonaje from './components/cardpersonaje'
 function App() {
+  const [detail, setDetail] = useState()
+  const [ID, setID] = useState(1)
 
+  useEffect(() => {
 
+    fetch(`https://www.breakingbadapi.com/api/characters/${ID}`)
+      .then(data => data.json())
+      .then(info => setDetail(info))
 
+  }, [ID])
+
+  console.log("ID", ID)
+
+  const handleChange = (id) => {
+    setID(id)
+  }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Custom Hooks</h1>
-        {/* <Contador /> */}
-        <BreakingBad />
-      </header>
-    </div>
+
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<BreakingBad onDetails={handleChange} />} />
+          <Route path="/:id" element={<CardPersonaje detail={detail} />} />
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   );
 }
 

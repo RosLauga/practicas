@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
 
-const useFetch = (id = 1) => {
+const useFetch = () => {
    
 const [personaje, setPersonaje] = useState() 
 
 useEffect( () => {
      
-    fetch(`https://www.breakingbadapi.com/api/characters/${id}`)
+    fetch(`localhost:3000/products`)
     .then(data => data.json())
     .then(info => setPersonaje(info)) 
 
-},[id])   
+})   
 
     return personaje
 

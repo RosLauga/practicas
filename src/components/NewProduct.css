@@ -1,0 +1,83 @@
+.formContainer{
+    background-color: #212121;
+    min-height: 100vh;
+    transition: .4s all ease-in-out;
+}
+
+.formContainer section{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.formContainer h3, .formContainer label{
+    color: #fff;
+    font-weight: 300;
+}
+.formContainer label{
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
+/* Formulario */
+fieldset{
+    margin: 15px auto;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.formContainer form input, form textarea{
+    color: #fff;
+    background-color: #333333;
+    border: 1px #919191 solid;
+    padding: 8px 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.formContainer fieldset select{
+    
+    color: #fff;
+    background-color: #333333;
+    border: 1px #919191 solid;
+    border: 0;
+    border-radius: 20px;
+    width: 100%;
+    padding: 8px 20px;
+    
+}
+/* 
+.test{
+    width:100vw !important;
+    border: 2px solid  red;
+} */
+
+.formContainer .relative{
+    position: relative;
+}
+
+.formContainer input[name="stock"]{
+    text-align: center;
+}
+.formContainer fieldset svg{
+    color: #fff;
+    position: absolute;
+}
+.formContainer fieldset svg[data-icon="minus"]{
+    right: 10%;
+    top: 55%;
+}
+.formContainer fieldset svg[data-icon="plus"]{
+    top: 55%;
+    left: 10%;
+
+}

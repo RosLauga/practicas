@@ -2,8 +2,7 @@ import { useState } from "react"
 
 const useCounter = () => {
 
-    
-       const [counter, setCounter] = useState(1)
+        const [counter, setCounter] = useState(1)
     
         const suMar = () => {
             setCounter(counter+1)
@@ -18,8 +17,6 @@ const useCounter = () => {
             suMar,
             resTar
         } 
-
-
 }
 
 export default useCounter;
